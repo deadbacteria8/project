@@ -1,0 +1,17 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>team</title>
+<link rel="stylesheet" type="text/css" href="/sassFolder/output.css">
+<link rel="icon" href="/favicon.ico">
+<header>
+    <% if (typeof userRoutes !== 'undefined') { %>
+    <nav class="nav">
+        <ul>
+        <% for (let i = 0; i < userRoutes.length; i++) { %>
+        <li><a href="<%= userRoutes[i] %>"><%= userRoutes[i].substring(1) %></a></li>
+        <% } %>
+        <li><a href="/logout">logout</a></li>
+    </ul>
+    </nav>
+    <% } %>
+</header>

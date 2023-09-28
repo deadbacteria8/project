@@ -1,0 +1,16 @@
+<%- include('header.ejs') %>
+<div class="maindiv">
+<form method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    
+    <input type="submit" value="Login">
+</form>
+<% if (typeof loginMessage !== 'undefined') { %>
+    <p><%= loginMessage %></p>
+    <% } %>
+</div>
+<%- include('footer.ejs') %>

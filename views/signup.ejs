@@ -1,0 +1,15 @@
+<%- include('header.ejs') %>
+<div class="maindiv">
+<form method="POST">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <label for="password2">Input password again:</label>
+    <input type="password" id="password2" name="password2" required><br><br>
+    <input type="submit" value="Submit password">
+</form>
+<% if (message !== undefined) { %>
+    <p><%= message %></p>
+<% } %>
+</div>
+<%- include('footer.ejs') %>

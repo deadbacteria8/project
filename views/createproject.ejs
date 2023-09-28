@@ -1,0 +1,42 @@
+<%- include('header.ejs') %>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<div class="maindiv">
+    <div class="grid-container">
+        <button class="item-wide" id="toggleButton">Customized date-selection</button>
+        <div class="item special" style="display: block;">
+            <label for="report-frequency">Reporting-frequency</label>
+            <select id="report-frequency">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="fortnightly">Fortnightly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+        </div>
+        <div class="item special" style="display: block;">
+            <label for="range-picker">Project date-range</label>
+            <div id="range-picker"></div></div>
+        <div class="item special" style="display: none;">
+            <label for="date-picker">Reporting dates:</label>
+            <div id="date-picker"></div>
+        </div>
+        <div class="item">
+        <div class="list">
+            <div id="span">Select Users</div>
+            <ul id="items" class="hidden">
+                <% for (const row of users[0]) { %>
+                    <li><input type="checkbox" value="<%= row.employee_id %>"/> <%= row.employee_id %></li>
+                    <% } %>
+            </ul>
+        </div>
+    </div>
+    <div class="item">
+        <input type="text" id="title" placeholder="Enter Title">
+    </div>
+<button id="submit" class="item-wide special" style="display: block;">Submit</button> 
+<button id="submitCustomized" class="item-wide special" style="display: none;">Submit</button> 
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="/cal.js" type="module"></script>
+<%- include('footer.ejs') %>

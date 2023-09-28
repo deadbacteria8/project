@@ -1,0 +1,4 @@
+DROP DATABASE IF EXISTS team;
+CREATE DATABASE IF NOT EXISTS team;
+USE team;
+source ddl.sql;

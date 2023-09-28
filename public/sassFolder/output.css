@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import "~flatpickr/dist/flatpickr.min.css";
+html {
+  background-color: #007BFF;
+}
+
+h1, h2, h3, p, a, label {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.nav {
+  background-color: white;
+}
+.nav ul {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.nav li {
+  display: inline;
+  padding: 1rem;
+}
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+.nav li:hover {
+  background-color: rgb(206, 206, 206);
+}
+
+.maindiv {
+  background-color: white;
+  border: 0.2rem solid #333333;
+  display: flex;
+  min-height: 70vh;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+.list {
+  background-color: white;
+}
+.list div {
+  cursor: pointer;
+  margin: 0;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 0;
+}
+
+#items {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+#items li {
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  height: 300px;
+}
+
+.item {
+  padding: 20px;
+  font-size: 24px;
+}
+
+.item-wide {
+  grid-column: span 4;
+}
+
+/*# sourceMappingURL=output.css.map */
