@@ -1,16 +1,21 @@
 <%- include('header.ejs') %>
 <div class="maindiv">
+    <% if (typeof loginMessage !== 'undefined') { %>
+        <div class="msg"><p><%= loginMessage %></p></div>
+        <% } %>
+        <div class="input-container">
+
 <form method="POST">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required><br><br>
+    <label for="username"><b>Username</b></label>
+    <input class="input-credentials" type="text" id="username" name="username" required>
     
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required><br><br>
+    <label for="password"><b>Password</b></label>
     
-    <input type="submit" value="Login">
+    <input class="input-credentials" type="password" id="password" name="password" required>
+    
+    <input type="submit" value="Login" class="login-submit">
 </form>
-<% if (typeof loginMessage !== 'undefined') { %>
-    <p><%= loginMessage %></p>
-    <% } %>
+
+</div>
 </div>
 <%- include('footer.ejs') %>

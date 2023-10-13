@@ -12,6 +12,7 @@ h1, h2, h3, p, a, label {
     margin: 0;
 }
 
+
 .nav {
     background-color: white;
     ul {
@@ -32,17 +33,55 @@ h1, h2, h3, p, a, label {
         background-color: rgb(206, 206, 206);
     }
 }
+i.fa-bars {
+    display: none;
+}
+
+#navDiv {
+    display: none;
+}
+
+.hamburger-div-item {
+    background-color: white;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@media (max-width: 1000px) {
+    .nav li {
+        display: none;
+    }
+
+    i.fa-bars {
+        display: inline;
+        padding: 1rem;
+        font-size: 30px;
+    }
+
+    #navDiv {
+        display: inline;
+    }
+}
 
 .maindiv {
     background-color: white;
     border: 0.2rem solid $secondary-color;
     display: flex;
-    min-height: 70vh;
+    flex-direction: column;
     margin-left: 2rem;
     margin-right: 2rem;
     border-radius: 1rem;
     padding: 2rem;
+    overflow: auto;
+    min-height: 30rem;
+    margin-bottom: 5rem;
 }
+
 
 body {
     margin: 0;
@@ -59,7 +98,6 @@ footer {
 
 .list {
     background-color: white;
-
     div {
         cursor: pointer;
         margin: 0;
@@ -86,18 +124,188 @@ footer {
     display: none;
 }
 
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    height: 300px;
 }
 
 .item {
-    padding: 20px;
+    padding: 1rem;
     font-size: 24px;
+
+    select {
+        width: 33%;
+    }
 }
 
 .item-wide {
+    padding: 1rem;
     grid-column: span 4;
+
+
+
+    button {
+        padding: 1rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        background-color: $optional-color;
+        color: black;
+    }
+}
+
+@media (max-width: 1000px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .item {
+        grid-column: span 1;
+        width: 50%;
+
+        input {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .item-wide {
+        grid-column: span 1;
+    }
+
+    .item.special label {
+        display: none;
+    }
+
+    #title {
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+.reportsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.reportItem {
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.reportItem:hover {
+    background-color: #e0e0e0;
+}
+
+
+.reportItem td {
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+.rowStatus {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    width: 20rem;
+    padding: 1rem;
+    border: 1px solid $secondary-color;
+    border-radius: 1rem;
+    background-color: $alternative-white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.file-label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+
+.csv-submit-button {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.csv-submit-button:hover {
+    background-color: #0056b3;
+}
+
+.msg {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: $alternative-white;
+    border: 2px solid black;
+    p {
+        text-align: center;
+    }
+}
+
+.input-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.input-field {
+    min-height: 3rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.login-submit {
+    background-color: $alternative-white;
+    border: 1px solid $secondary-color;
+    margin: 0.7rem 0;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.login-submit:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+.input-credentials {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.7rem 0;
+    display: inline-block;
+    border-radius: 1rem;
+    border: 1px solid $secondary-color;
+    box-sizing: border-box;
 }

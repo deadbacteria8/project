@@ -1,0 +1,14 @@
+<%- include('header.ejs') %>
+<div class="maindiv">
+    <h3>Project: <%= message[0].title %></h3>
+    <h3>User: <%= message[0].user_id %></h3>
+    <div class="input-div">
+    <label for="messageInput" class="input-label">Input:</label>
+    <input type="text" id="messageInput" class="input-field" value="<%= message[0].input %>" readonly>
+    </div>
+</div>
+<script>
+    const reportStatus = "Submitted";
+</script>
+<script src="/table.js" type="module"></script>
+<%- include('footer.ejs') %>

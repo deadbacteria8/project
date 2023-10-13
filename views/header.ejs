@@ -2,16 +2,19 @@
 <meta charset="utf-8">
 <title>team</title>
 <link rel="stylesheet" type="text/css" href="/sassFolder/output.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" href="/favicon.ico">
 <header>
     <% if (typeof userRoutes !== 'undefined') { %>
     <nav class="nav">
         <ul>
-        <% for (let i = 0; i < userRoutes.length; i++) { %>
-        <li><a href="<%= userRoutes[i] %>"><%= userRoutes[i].substring(1) %></a></li>
-        <% } %>
-        <li><a href="/logout">logout</a></li>
+            <% for (let i = 0; i < userRoutes.length; i++) { %>
+                <li><a href="<%= userRoutes[i].path %>"><%= userRoutes[i].name %></a></li>
+            <% } %>
+        <li><a href="/logout">Logout</a></li>
+        <i class="fa fa-bars"></i>
     </ul>
     </nav>
+    <script src="/hamburgerMenu.js" type="module"></script>
     <% } %>
 </header>

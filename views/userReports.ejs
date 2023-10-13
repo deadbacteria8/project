@@ -1,0 +1,22 @@
+<%- include('header.ejs') %>
+<div class="maindiv">
+    <% if (message !== undefined) { %>
+        <div class="msg"><p><%= message %></p></div>
+    <% } %>
+    <table class="reportsTable">
+        <tbody>
+        <% for (const row of reports[0]) { %>
+            <tr class="reportItem" data-link="<%= row.id %>">
+            <td><%= row.title %></td>
+            <td>Due-date: <%= row.report_date.slice(0, -3) %></td>
+            <td class="rowStatus"><%= row.status %></td>
+            </tr>
+        <% } %>
+        </tbody>
+    </table>
+</div>
+<script>
+    const reportStatus = "Pending";
+</script>
+<script src="/table.js" type="module"></script>
+<%- include('footer.ejs') %>

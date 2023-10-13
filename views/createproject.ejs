@@ -2,8 +2,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <div class="maindiv">
     <div class="grid-container">
-        <button class="item-wide" id="toggleButton">Customized date-selection</button>
-        <div class="item special" style="display: block;">
+        <div class="item-wide">
+        <button id="toggleButton">Customized date-selection</button>
+        </div>
+        <div class="item default">
             <label for="report-frequency">Reporting-frequency</label>
             <select id="report-frequency">
                 <option value="daily">Daily</option>
@@ -12,10 +14,10 @@
                 <option value="monthly">Monthly</option>
             </select>
         </div>
-        <div class="item special" style="display: block;">
+        <div class="item default">
             <label for="range-picker">Project date-range</label>
             <div id="range-picker"></div></div>
-        <div class="item special" style="display: none;">
+        <div class="item special">
             <label for="date-picker">Reporting dates:</label>
             <div id="date-picker"></div>
         </div>
@@ -32,8 +34,11 @@
     <div class="item">
         <input type="text" id="title" placeholder="Enter Title">
     </div>
-<button id="submit" class="item-wide special" style="display: block;">Submit</button> 
-<button id="submitCustomized" class="item-wide special" style="display: none;">Submit</button> 
+    <div class="item-wide">
+<button id="submit" class="default">Submit</button> 
+<button id="submitCustomized" class="special">Submit</button> 
+</div>
+</div>
 </div>
 
 

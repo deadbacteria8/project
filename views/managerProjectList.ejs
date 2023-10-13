@@ -1,0 +1,20 @@
+<%- include('header.ejs') %>
+<div class="maindiv">
+<table class="reportsTable">
+    <tbody>
+    <% for (const row of reports[0]) { %>
+        <tr class="reportItem" data-link="<%= row.m_id %>">
+        <td><%= row.title %></td>
+        <td>User: <%= row.user_id %></td>
+        <td>Due-date: <%= row.report_date %></td>
+        <td class="rowStatus"><%= row.status %></td>
+        </tr>
+    <% } %>
+    </tbody>
+</table>
+</div>
+<script>
+    const reportStatus = "Submitted";
+</script>
+<script src="/table.js" type="module"></script>
+<%- include('footer.ejs') %>
