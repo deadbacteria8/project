@@ -156,9 +156,7 @@ async function insertMessage(id, text) {
   const db = await mysql.createConnection(config)
   let message = 'Successful'
   try {
-    const messageQuery = await db.query(
-      `CALL insert_messages('${id}', '${text}');`,
-    )
+    const messageQuery = await db.query('CALL insert_messages(?,?)', [id, text])
     const newMessageID = messageQuery[0][0].newMessageID
     const sqlQuery = await db.query(`CALL select_routes('project');`)
     let routesFromQuery = sqlQuery[0][0].routes
@@ -171,7 +169,8 @@ async function insertMessage(id, text) {
     await db.query(
       `CALL update_routes('project','${JSON.stringify(routesFromQuery)}')`,
     )
-  } catch {
+  } catch (error) {
+    console.log(error)
     message = 'Unsuccessful'
   }
   db.end()

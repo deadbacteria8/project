@@ -79,7 +79,6 @@ const handleCsv = async (fileP) => {
       }
 
       await transporter.sendMail(messageData)
-
     } catch (error) {
       console.log(error)
       // appending the row that has an error

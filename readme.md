@@ -8,4 +8,4 @@ Go to the root of the directory and execute command `npm install` to install all
 
 In the root of the directory, execute command `node createprojectmanager.js` to create the account for the project manager. If you dont change the credentials, username is project and password is manager.
 
-To succesfully upload a csv, use the same format and column names as displayed in format.csv file. Created users will receive an email from deadbacteria8@outlook.com. If you want, you can change the configured email sender in handle/handlecsv.js .
+To succesfully upload a csv, use the same format and column names as displayed in format.csv file. The columns does not need to be in the same order as they are displayed in the format.csv file but the columns need to exist. Created users will receive an email from deadbacteria8@outlook.com. If you want, you can change the configured email sender in handle/handlecsv.js .
