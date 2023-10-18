@@ -1,4 +1,4 @@
-Application requires Mariadb(11.1.2-MariaDB) and Node.js(v18.12.0)
+Application requires Mariadb(11.1.2-MariaDB),Node.js(v18.12.0) and sass(1.60.0)
 
 Configure your database connection in /config/db.json database team should be used.
 
