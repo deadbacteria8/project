@@ -71,7 +71,7 @@ const handleCsv = async (fileP) => {
         to: data.email_address,
         subject: 'Signup',
         html:
-          '<h1>Signup for project-pulse<h1><br><a href="http://localhost:1338/signup/' +
+          '<h1>Signup for project-pulse</h1><br><a href="http://localhost:1338/signup/' +
           token +
           '">Signup</a><p>employee-id: ' +
           data.employee_id +
