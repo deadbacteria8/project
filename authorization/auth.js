@@ -26,10 +26,7 @@ const middlewareAuth = (req, res, next) => {
         const routeObject = req.userRoutes.find(
           (route) => route.path === firstParameter,
         ) // find extra param
-        console.log(urlParts[2])
-        console.log(routeObject.parameters)
         forExtraParam = routeObject.parameters.includes(parseInt(urlParts[2])) // check if the parameter exist for the user.
-        console.log(forExtraParam)
       }
       if (!routeExists || !forExtraParam) {
         return res.redirect(req.userRoutes[0].path)
