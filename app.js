@@ -16,6 +16,6 @@ app.use(cookieParser())
 
 app.use(router)
 
-app.listen(750, () => {
+app.listen(1337, () => {
   console.log('Server started')
 })
