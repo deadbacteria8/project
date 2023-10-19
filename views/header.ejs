@@ -10,6 +10,8 @@
         <ul>
             <% for (let i = 0; i < userRoutes.length; i++) { %>
                 <li><a href="<%= userRoutes[i].path %>"><%= userRoutes[i].name %></a></li>
+            <% } %> else { %>
+                <li><a href="/login">Login</a></li>
             <% } %>
         <li><a href="/logout">Logout</a></li>
         <i class="fa fa-bars"></i>
